@@ -1,9 +1,0 @@
-
-
-Question 1: 
-The ping test showed the following error message: ping: google.com: Temporary failure in name resolution. This confirms that the VM cannot reach any external networks. This in turn proves that the sandbox is completely air-gapped. 
-
-Question 2:
-Bridged mode puts the Virtual Machine directly on your LAN, which gives malware visibility into your router, devices, and services. In other words, bridged mode places the VM on the same network as the host machine, which gives malware visibility into the real LAN. This means that if given the chance, it could scan devices, interact with the router, or even attemt to spread. However, Host-Only mode prevents all of these risks by isolating the VM on its own private virtual network.
-
-
