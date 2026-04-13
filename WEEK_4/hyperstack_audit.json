@@ -1,0 +1,10 @@
+
+
+{
+  "operator": "GJ",
+  "host_ip": "192.168.1.186",
+  "vm_sandbox_ip": "192.168.98.3",
+  "web_container_id": "3a3986989e8f",
+  "isolation_test": "PASSED",
+  "persistence_verified": true
+}
