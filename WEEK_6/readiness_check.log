@@ -1,0 +1,22 @@
+==================================================
+SESSION 16: READINESS INVENTORY
+==================================================
+Operator: Garrick Jean-Louis
+Date: 04/21/2026
+
+Confidence Audit (Yes/No):
+1. Nmap (Network Scanning): [Y]
+2. Docker (Containerization): [Y]
+3. Linux Hardening (UFW/chmod): [Y]
+4. VS Code Remote-SSH: [Y]
+
+Identify your weakest area and your plan to review it:
+
+Weakest Area: Docker networking and port-binding conflicts.
+
+Plan to review: To strengthen my Docker networking skills by:
+1. Reviewing Docer's networking modes.
+2. Reviewing port mapping in Docker.
+3. Solving similar problems to get used to it.
+By the end of my review, I plan to be able to identify port conflicts and recognize if they are caused by Docker or something else. Then I should be able to quickly and confidently resolve these issues using the correct methods.
+==================================================
