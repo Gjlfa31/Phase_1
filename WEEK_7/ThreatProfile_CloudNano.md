@@ -2,12 +2,14 @@
 **Classification:** Passive Security Audit
 **Operator:** ## 1. Subdomain Discovery 
 * **Tool Used:** Sublist3r
-* **Subdomains Found:** * [Subdomain 1: news.yahoo.com] 
+* **Subdomains Found:**
+  * [Subdomain 1: news.yahoo.com] 
   * [Subdomain 2: finance.yahoo.com] 
 
 ## 2. Tech Stack Mapping 
 * **Tool Used:** BuiltWith / Wappalyzer
-* **Identified Technologies (CMS/CDN/Backend):** * [Tech 1: Analytics & Tracking (Google Analytics, Datadog RUM)] 
+* **Identified Technologies (CMS/CDN/Backend):**
+  * [Tech 1: Analytics & Tracking (Google Analytics, Datadog RUM)] 
   * [Tech 2: Backend Technologies: Java EE, Perl, nginx]
   * [Tech 3: CDN: CloudFront, Amazon S3, Yahoo Image CDN] 
 
