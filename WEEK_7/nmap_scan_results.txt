@@ -4,16 +4,16 @@ Target Subnet: 172.99.0.0/24
 ==================================================
 
 HOST 1 (172.99.0.5)
-* Open Ports: [80/tcp]
-* Service/Version: [nginx 1.29.8]
+* Open Ports: 80/tcp
+* Service/Version: nginx 1.29.8
 
 HOST 2 (172.99.0.6)
-* Open Ports: [6279/tcp]
-* Service/Version: [redis-server (Redis key-value store) 8.6.2]
+* Open Ports: 6279/tcp
+* Service/Version: redis-server (Redis key-value store) 8.6.2
 
 HOST 3 (172.99.0.7)
-* Open Ports: [80/tcp]
-* Service/Version: [Apache httpd 2.4.66 (Unix)]
+* Open Ports: 80/tcp
+* Service/Version: Apache httpd 2.4.66 (Unix)
 
 QUESTIONS:
 1. What Nmap flag did you use to find the specific software versions running on these ports?
