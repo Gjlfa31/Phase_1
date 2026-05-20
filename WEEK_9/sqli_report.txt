@@ -1,0 +1,23 @@
+==================================================
+SESSION 25: SQL INJECTION EXFILTRATION REPORT
+==================================================
+
+1. AUTHENTICATION BYPASS
+* Tautology Payload Used: ' OR 1=1 --
+* Field: Username (Password left blank)
+* Result: Login bypassed, Employee Directory is visible.
+* Explanation: The payload that was used turns the WHERE clause into a tautology and comments out the password check with --. With this the query always returns a row and the app treats the user as authenticated.
+
+2. DATABASE MAPPING (UNION ATTACK)
+* Number of Columns Discovered: 2. Since ORDER BY 1, and ORDER BY @ returned valid results, but ORDER BY 3 triggered a database error.
+* Table Name Discovered: employees
+* Schema: CREATE TABLE employees (id INTEGER PRIMARY KEY, name TEXT, department TEXT, salary TEXT)
+
+3. DATA EXFILTRATION
+* CEO Salary Extracted: Alice (CEO) - $2,500,000
+* Final UNION Payload Used: ' UNION SELECT name, salary FROM employees --
+
+4. REMEDIATION
+* What is the primary defense against this attack?
+Answer: The primary defense against these sorts of attacks would be to use parameterized queries which are basically prepared statements, instead of string-concatenated SQL. This will ensure that the input given by the user is only seen as data, not SQL statements to be executed. By doing this, it will prevent tautologies, UNION injections, and Schema enumeration from occurring.
+* Additional Controls: Disabling verbose SQL error messages in production; Apply least-privilege permission to the users in the database; validation and sanitization of user input...
