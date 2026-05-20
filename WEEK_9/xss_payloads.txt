@@ -1,0 +1,17 @@
+==================================================
+SESSION 26: CLIENT-SIDE ATTACK PAYLOADS
+==================================================
+
+1. REFLECTED XSS
+* Payload Used: <script>alert('XSS')</script>
+* Concept: Why does this attack disappear when you refresh the page?
+Answer: This is a reflected XSS attack meaning that the payload only exists in the current request and isn't stored on the server itself. When the user refreshes the page without resending the payload, the server returns a clean page, the script will be gone and no alert will appear.
+
+2. STORED XSS (Cookie Theft)
+* Payload Used: <script>alert(document.cookie)</script>
+* Cookie Value Stolen: session_id=admin_secret_99812_do_not_share
+
+3. CROSS-SITE REQUEST FORGERY (CSRF)
+* Malicious URL Crafted: http://192.168.1.99:8081/transfer?to=Attacker&amount=5000
+* Concept: What is the primary defense against CSRF?
+Answer: The primary defense against these types of attacks would be the implementation of a server-side anti-CSRF token, AKA a synchronizer token. Since these tokens are unique per user session, unpredictable, inserted into every state-changing form/request, and validated by the server before processing, they can be used to prevent CSRF attacks since attackers aren't able to read the victim's page meaning that they can't know the value of the token. Therefore, even if they get to the point of tricking the victim into loading a malicious URL, the request will fail without the appropriate token.
