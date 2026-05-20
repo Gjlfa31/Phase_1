@@ -1,0 +1,18 @@
+==================================================
+SESSION 27: API SECURITY AUDIT LOG
+==================================================
+
+1. BOLA (ID SWAP) EXPLOITATION
+* Targeted User ID: 102
+* Private Information Leaked: {"email":"boss@titan.com","name":"CISO","role":"Admin","secret":"TITAN_MASTER_KEY_2026"}
+
+2. BUSINESS LOGIC EXPLOITATION (DISCOUNT HUNTER)
+* Hidden Discount Code Discovered: 9913
+* Method Used: Used Burp Intruder to brute-force the discount_code parameter in the POST request. Accompanied by the newly configured numeric payload range which is from 9900 to 9999, i was able to correctly identify the correct code by a unique response length of 224 bytes compared to all other responses that were 220 bytes.
+
+3. REMEDIATION RECOMMENDATION
+* How would you fix the BOLA vulnerability?
+Answer: The main answer would be to implement strict server-side authorization checks for all object level access. The API in use must be able to verify that the authenticator is the owner of the resource that is being requested before providing any sort of data. It is important to also enforce user-to-resource mapping to avoid trusting path parameters that can be controlled by the user, and adopt a centraliaed authorization layer. There are many more ways to mitigate these sorts of vulnerabilities.
+
+* How would you fix the Brute-Force vulnerability in the discount field?
+Answer: Introduce rate limiting, lockout thresholds, and intrusion detection for repeated failed discount attempts. We can also replace the normal discount codes with more randomly generated tokens to prevent predictions.
