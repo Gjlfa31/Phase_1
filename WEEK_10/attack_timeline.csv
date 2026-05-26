@@ -1,0 +1,4 @@
+Timestamp,Source IP,Event Type,Action,Description
+04/30/2026, 198.51.100.44, Web Server, Initial Access, POST /api/upload - Malicious payload executed (200 OK)
+04/30/2026, 10.0.5.15, Windows Security, Lateral Movement, Event ID 4624 - Successful Logon; User escalated to Domain Admin
+04/30/2026, 10.0.5.15 --> 198.51.100.44, Firewall, Exfiltration, Outbound traffic anomalous volume: 4.5 GB transferred over port 443.
