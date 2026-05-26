@@ -12,8 +12,8 @@
 ### HOW:
 * The infection began when the user executed Resume.exe, which deployed a hidden process (rootkit_beacon.exe) that did not appear in normal system process listings.
 
-The malware established persistence by adding itself to: HKLM\Software\Microsoft\Windows\CurrentVersion\Run
+* The malware established persistence by adding itself to: HKLM\Software\Microsoft\Windows\CurrentVersion\Run
 
-It also modified a critical system file: C:\Windows\System32\drivers\tcpip.sys, indicating a deeper system compromise.
+* It also modified a critical system file: C:\Windows\System32\drivers\tcpip.sys, indicating a deeper system compromise.
 
-After execution, the attacker attempted anti‑forensic cleanup by deleting the executable from disk. Despite this, memory artifacts and the recovered payload provided enough evidence to reconstruct the infection chain.
+* After execution, the attacker attempted anti‑forensic cleanup by deleting the executable from disk. Despite this, memory artifacts and the recovered payload provided enough evidence to reconstruct the infection chain.
