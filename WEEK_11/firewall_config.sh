@@ -1,6 +1,6 @@
 #!/bin/bash
 # DMZ LOCKDOWN SCRIPT (iptables)
-# Operator: 
+# Operator: Garrick 
 
 # Flush existing rules
 iptables -F
