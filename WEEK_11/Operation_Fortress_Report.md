@@ -10,4 +10,7 @@
 ## LAYER 3: ENDPOINT SECURITY (Sysmon)
 **Objective:** Alert on payload download via curl
 **XML Condition Used:** 
-\\\xml <CommandLine condition="contains">curl [http://198.51.100.5](http://198.51.100.5)</CommandLine> \\\
+```xml
+<CommandLine condition="contains">curl http://198.51.100.5</CommandLine>
+```
+
