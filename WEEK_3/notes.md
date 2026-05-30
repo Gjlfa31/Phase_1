@@ -8,10 +8,10 @@ This week marked the shift from operator to builder, where I learned how to tran
 **port_check.py**  
 A Python script built during Session 07 to validate open ports using the `socket` library. This required setting up and activating a Python virtual environment to isolate dependencies and prevent system‑level conflicts while testing defensive tools.
 
-**log_filter.py**  
+**brute_detector.py**  
 Created in Session 08, this script uses lists, loops, and conditional logic to categorize network events by risk level. It automates the process of cross‑referencing incoming traffic against known malicious IPs, enabling scalable threat filtering.
 
-**firewall_bot.py**  
+**system_auditor.py**  
 Developed in Session 09, this script reads system logs, identifies failed login attempts, and writes flagged entries to a new block‑list file. It incorporates functions and error‑handling to ensure stability even when logs are missing or corrupted.
 
 **incident_response.py**  
