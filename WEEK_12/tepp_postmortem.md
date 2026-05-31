@@ -1,7 +1,7 @@
 # Phase 1 Final Reckoning — TEPP Post-Mortem
-**Operator:** [Your Full Name]
-**Date:** May 28, 2026
-**Repository:** [Your GitHub repo URL]
+**Operator:** Garrick Jean-Louis
+**Date:** May 30, 2026
+**Repository:** https://github.com/Gjlfa31/Phase_1.git
 **TKH Innovation Fellowship 2026 | Phase 1 | Cybersecurity**
 
 ---
